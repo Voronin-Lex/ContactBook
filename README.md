@@ -1,1 +1,1 @@
-# ContactBook
+# ContactBook (React + Redux)
