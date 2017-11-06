@@ -52,7 +52,7 @@ class PersonForm extends Component{
                    <br/>
 
                    birthDate:<br/>
-                   <input type="text" id="birthDate" placeholder="enter birthDate"/>
+                   <input type="date" id="birthDate" placeholder="enter birthDate"/>
                    <br/>
 
                    description:<br/>

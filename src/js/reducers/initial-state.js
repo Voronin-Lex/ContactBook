@@ -6,7 +6,7 @@ const initialState = {
             mobile: "114-15-22",
             eMail: "nick@gmail.com",
             skype: "zanozza19",
-            birthDate: "10.01.1990",
+            birthDate: "1990-01-10",
             description: "old fellow Nicki"
         },
 
@@ -16,7 +16,7 @@ const initialState = {
             mobile: "112-90-55",
             eMail: "sarah@gmail.com",
             skype: "pony22",
-            birthDate: "14.08.1982",
+            birthDate: "1982-08-14",
             description: "favorite whore"
         },
 
@@ -26,7 +26,37 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "dany@gmail.com",
             skype: "eagle31",
-            birthDate: "13.09.1984",
+            birthDate: "1984-09-13",
+            description: "tour companion"
+        },
+
+        {
+            name: "Julia Jones",
+            homePhone: "742-28-51",
+            mobile: "452-23-22",
+            eMail: "july@gmail.com",
+            skype: "eagle31",
+            birthDate: "1984-11-07",
+            description: "tour companion"
+        },
+
+        {
+            name: "Robert Patrick",
+            homePhone: "242-08-51",
+            mobile: "452-23-22",
+            eMail: "dany@gmail.com",
+            skype: "eagle31",
+            birthDate: "1984-11-06",
+            description: "tour companion"
+        },
+
+        {
+            name: "Alica Stones",
+            homePhone: "242-08-51",
+            mobile: "452-23-22",
+            eMail: "dany@gmail.com",
+            skype: "eagle31",
+            birthDate: "1984-11-05",
             description: "tour companion"
         }
     ]

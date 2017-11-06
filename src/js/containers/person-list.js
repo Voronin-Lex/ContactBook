@@ -8,8 +8,38 @@ import {Link} from 'react-router-dom'
 
 class PersonList extends Component {
 
+    filterPersons(){
+        if(this.props.currentLetter === '#')
+            return this.props.persons;
+
+        let filteredPersons = this.props.persons.filter(person => {
+            let name = person.name.split(" ")[0];
+            if(name.startsWith(this.props.currentLetter))
+                return person;
+        });
+        return filteredPersons;
+    }
+
+    searchPersons(persons){
+        let matchedContacts = persons.filter(person => {
+            let matchName = person.name.toLowerCase().includes(this.props.searchPattern);
+            let matchPhone =  person.homePhone.toLowerCase().includes(this.props.searchPattern);
+            let matchMobile =  person.mobile.toLowerCase().includes(this.props.searchPattern);
+            let matchEMail =  person.eMail.toLowerCase().includes(this.props.searchPattern);
+            let matchSkype =  person.skype.toLowerCase().includes(this.props.searchPattern);
+            let mathDescription = person.description.toLowerCase().includes(this.props.searchPattern);
+            if(matchName || matchPhone || matchMobile || matchEMail || matchSkype || mathDescription)
+                return person
+        });
+        return matchedContacts;
+    }
+
+
     renderList() {
-        return this.props.persons.map((person) => {
+
+        let filteredPersons = this.filterPersons();
+        let matchedPersons = this.searchPersons(filteredPersons);
+        return matchedPersons.map((person) => {
             return (
                 <li
                     key={person.name}
@@ -42,7 +72,9 @@ class PersonList extends Component {
 
 function mapStateToProps(state) {
     return {
-        persons: state.persons.contacts
+        persons: state.persons.contacts,
+        currentLetter: state.selectedLetter,
+        searchPattern: state.searchPattern
     };
 }
 
@@ -50,7 +82,7 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators({
         editPerson: editPerson,
         deletePerson: deletePerson,
-        selectPerson: selectPerson
+        selectPerson: selectPerson,
     }, dispatch);
 }
 
