@@ -55,8 +55,9 @@ class BirthDayList extends Component {
     render() {
         return (
             <div>
-                <h5>Incoming Birthdays:</h5>
-                {this.renderList()}
+                <ul>
+                    {this.renderList()}
+                </ul>
             </div>
         )
     }

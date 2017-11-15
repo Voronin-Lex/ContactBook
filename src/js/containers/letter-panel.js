@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from "redux";
 import {selectLetter} from '../actions/select-letter'
+import Button from 'react-bootstrap/lib/Button'
+import ButtonGroup from 'react-bootstrap/lib/ButtonGroup'
+import {Link} from "react-router-dom";
 
 class LetterPanel extends Component {
     constructor(props) {
         super(props);
-        this.state = {navId: "pannel"}
     }
 
     generateButtons() {
@@ -17,16 +19,20 @@ class LetterPanel extends Component {
 
         buttonCodes = ["#", ...buttonCodes];
 
-        return buttonCodes.map( button =>
-            <button key={button} onClick={() => this.props.selectLetter(button)}>{button}</button>
+        return buttonCodes.map(button =>
+            <Button bsStyle="primary" key={button} onClick={() => this.props.selectLetter(button)}>{button}</Button>
         )
     }
 
     render() {
         return (
-            <nav id={this.state.navId}>
-                {this.generateButtons()}
-            </nav>
+            <div>
+                <ButtonGroup>
+                    {this.generateButtons()}
+                </ButtonGroup>
+                <br/>
+                <Link id="AddContact" to="/create">Add contact</Link>
+            </div>
         )
     }
 }
@@ -40,6 +46,5 @@ function matchDispatchToProps(dispatch) {
         selectLetter: selectLetter
     }, dispatch);
 }
-
 
 export default connect(mapStateToProps, matchDispatchToProps)(LetterPanel);

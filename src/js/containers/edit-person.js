@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {editPerson} from '../actions/edit-person'
+import form from 'react-bootstrap/lib/Form';
+import FormGroup from 'react-bootstrap/lib/FormGroup'
+import ControlLabel from 'react-bootstrap/lib/ControlLabel'
+import FormControl from 'react-bootstrap/lib/FormControl'
+import Button from 'react-bootstrap/lib/Button'
 
 class PersonForm extends Component {
 
@@ -41,44 +46,80 @@ class PersonForm extends Component {
     render() {
         return (
             <div>
-                <h3>New Form</h3>
+                <h3>Edit Contact</h3>
                 <form onSubmit={this.handleSubmit}>
-                    Name:<br/>
-                    <input type="text" id="name" value={this.state.editedPerson.name}
-                    />
-                    <br/>
-
-                    HomePhone:<br/>
-                    <input type="text" id="homePhone" value={this.state.editedPerson.homePhone}
-                           onChange={this.handleChange}/>
-                    <br/>
-
-                    Mobile:<br/>
-                    <input type="text" id="mobile" value={this.state.editedPerson.mobile}
-                           onChange={this.handleChange}/>
-                    <br/>
-
-                    eMail:<br/>
-                    <input type="text" id="eMail" value={this.state.editedPerson.eMail}
-                           onChange={this.handleChange}/>
-                    <br/>
-
-                    Skype:<br/>
-                    <input type="text" id="skype" value={this.state.editedPerson.skype}
-                           onChange={this.handleChange}/>
-                    <br/>
-
-                    birthDate:<br/>
-                    <input type="text" id="birthDate" value={this.state.editedPerson.birthDate}
-                           onChange={this.handleChange}/>
-                    <br/>
-
-                    description:<br/>
-                    <textarea rows="7" cols="50" id="description" value={this.state.editedPerson.description}
-                              onChange={this.handleChange}/>
-                    <br/>
-
-                    <input type="submit" value="edit contact"/>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="name">
+                        <ControlLabel>Name</ControlLabel>
+                        <FormControl
+                            type="text"
+                            value={this.state.editedPerson.name}
+                        />
+                    </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="homePhone">
+                        <ControlLabel>HomePhone</ControlLabel>
+                        <FormControl
+                            type="text"
+                            value={this.state.editedPerson.homePhone}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="mobile">
+                        <ControlLabel>Mobile</ControlLabel>
+                        <FormControl
+                            type="text"
+                            value={this.state.editedPerson.mobile}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="eMail">
+                        <ControlLabel>eMail</ControlLabel>
+                        <FormControl
+                            type="text"
+                            value={this.state.editedPerson.eMail}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="skype">
+                        <ControlLabel>Skype</ControlLabel>
+                        <FormControl
+                            type="text"
+                            value={this.state.editedPerson.skype}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="birthDate">
+                        <ControlLabel>birthDate</ControlLabel>
+                        <FormControl
+                            type="date"
+                            value={this.state.editedPerson.birthDate}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="description">
+                        <ControlLabel>description</ControlLabel>
+                        <FormControl
+                            componentClass="textarea"
+                            value={this.state.editedPerson.description}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <Button type="submit" bsStyle="success">
+                        Edit Contact
+                    </Button>
                 </form>
             </div>
         )

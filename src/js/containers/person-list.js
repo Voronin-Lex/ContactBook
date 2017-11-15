@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {editPerson} from '../actions/edit-person';
 import {deletePerson} from '../actions/delete-person';
 import {selectPerson} from '../actions/select-person';
-import {Link} from 'react-router-dom'
 
 class PersonList extends Component {
 
@@ -60,7 +59,6 @@ class PersonList extends Component {
     render() {
         return (
             <div>
-                <Link to="/create">Add contact</Link>
                 <ul>
                     {this.renderList()}
                 </ul>

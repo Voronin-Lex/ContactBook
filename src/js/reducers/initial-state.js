@@ -36,7 +36,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "july@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-11-07",
+            birthDate: "1984-11-17",
             description: "tour companion"
         },
 
@@ -46,7 +46,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "dany@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-11-06",
+            birthDate: "1984-11-16",
             description: "tour companion"
         },
 
@@ -56,7 +56,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "dany@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-11-05",
+            birthDate: "1984-11-16",
             description: "tour companion"
         }
     ]

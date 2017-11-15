@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@darkerGreen: #001C00;
+@darkGreen: #003300;
+@mediumGreen: #46733E;
+@lightGreen: #EDF1BE; //#E3EAB7
+@yellowGreen: #9ACD32;
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
+.form-group {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.btn-group {margin-left: 13%}
+
+#AddContact {margin-left: 45%; margin-top: 6px}
+
+form > .btn {margin-left: 15%; margin-top: 1%}
+
+h3 {text-align: center}
+
+
+.app {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  border: solid 2px @darkerGreen;
+}
+
+.list {
+  background: @darkGreen;
+  display: flex;
+  color: @lightGreen;
+  height: 100%;
+  overflow: auto;
+  h2 {
+    height: 30px;
+    text-align: center;
+  }
+}
+
+.contacts-container {
+  height: 330px;
+  overflow: auto;
+}
+
+.contact {
+  border-top: solid 2px @darkerGreen;
+  background: @darkGreen;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.contact > .image {
+  height: 60px;
+  width: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background-position: -10px 0px;
+  background-size: cover;
+}
+
+.contact > .name {
+  margin-left: 10px;
+  min-width: 50px;
+}
+
+.details {
+  display: flex;
+  background: @lightGreen;
+  flex-grow: 6;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  color: @darkGreen;
+}
+
+.contact-info > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+
+  .btnPanel{
+    display: flex;
+    margin: inherit;
+
+    #delete {
+      margin-left: 15px;
+    }
+  }
+
+  .image {
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-position: -10px 0;
+    background-size: cover;
+    &::before {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      padding: 55px;
+      box-sizing: border-box;
+      content: '\f095';
+      color: @darkerGreen;
+      font-size: 50px;
+      font-family: 'FontAwesome';
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.contact-info > section {
+  flex-grow: 2;
+  margin: 50px;
+  padding: 15px;
+  font-size: 14px;
+  p > span:nth-child(1) {
+    text-decoration: underline;
+    display: block;
+  }
+}
+
+.birthday {
+  display: flex;
+  flex-flow: column;
+  background: @yellowGreen;
+  flex-grow: 1;
+}
+
+.birthday > ul {
+
+}
+
+
+

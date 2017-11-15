@@ -7,6 +7,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import {NotFound} from './js/components/not-found'
 
 
+
 class App extends Component {
   render() {
     return (
