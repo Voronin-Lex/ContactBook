@@ -4,7 +4,6 @@ import {bindActionCreators} from "redux";
 import {selectLetter} from '../actions/select-letter'
 import Button from 'react-bootstrap/lib/Button'
 import ButtonGroup from 'react-bootstrap/lib/ButtonGroup'
-import {Link} from "react-router-dom";
 
 class LetterPanel extends Component {
     constructor(props) {
@@ -31,7 +30,9 @@ class LetterPanel extends Component {
                     {this.generateButtons()}
                 </ButtonGroup>
                 <br/>
-                <Link id="AddContact" to="/create">Add contact</Link>
+                <Button id="AddContact" bsStyle="success" onClick={() => {
+                    window.location.assign("#/create");
+                }}>Add contact</Button>
             </div>
         )
     }

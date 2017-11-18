@@ -7,6 +7,8 @@ import FormGroup from 'react-bootstrap/lib/FormGroup'
 import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import Button from 'react-bootstrap/lib/Button'
+import img from '../../resources/no-photo.jpg'
+import {selectPerson} from '../actions/select-person';
 
 class PersonForm extends Component {
 
@@ -36,9 +38,11 @@ class PersonForm extends Component {
             eMail: event.target.eMail.value,
             skype: event.target.skype.value,
             birthDate: event.target.birthDate.value,
+            image : img,
             description: event.target.description.value
         };
         this.props.editContact(editedPerson);
+        this.props.selectContact(editedPerson);
         setTimeout(() => window.location.assign("#/"), 1000);
 
     }
@@ -117,6 +121,14 @@ class PersonForm extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="photo">
+                        <ControlLabel>photo</ControlLabel>
+                        <FormControl
+                            type="file"
+                        />
+                    </FormGroup>
                     <Button type="submit" bsStyle="success">
                         Edit Contact
                     </Button>
@@ -136,6 +148,7 @@ function mapStateToProps(state) {
 function matchDispatchToProps(dispatch) {
     return bindActionCreators({
         editContact: editPerson,
+        selectContact: selectPerson
     }, dispatch);
 }
 

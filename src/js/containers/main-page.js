@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import PersonList from './person-list'
-import SelectedPerson from './selected-person';
 import LetterPanel from './letter-panel'
 import SearchArea from './search-field'
 import ContactList from './testBook'
@@ -16,10 +14,6 @@ export default class MainPage extends Component {
             <div>
                 <SearchArea/>
                 <LetterPanel/>
-                <PersonList/>
-                <hr/>
-                <SelectedPerson/>
-                <hr/>
                 <ContactList/>
             </div>
         )

@@ -1,3 +1,6 @@
+import img from '../../resources/no-photo.jpg'
+
+
 const initialState = {
     contacts: [
         {
@@ -7,6 +10,7 @@ const initialState = {
             eMail: "nick@gmail.com",
             skype: "zanozza19",
             birthDate: "1990-01-10",
+            image: img,
             description: "old fellow Nicki"
         },
 
@@ -17,6 +21,7 @@ const initialState = {
             eMail: "sarah@gmail.com",
             skype: "pony22",
             birthDate: "1982-08-14",
+            image: img,
             description: "favorite whore"
         },
 
@@ -27,6 +32,7 @@ const initialState = {
             eMail: "dany@gmail.com",
             skype: "eagle31",
             birthDate: "1984-09-13",
+            image: img,
             description: "tour companion"
         },
 
@@ -37,6 +43,7 @@ const initialState = {
             eMail: "july@gmail.com",
             skype: "eagle31",
             birthDate: "1984-11-17",
+            image: img,
             description: "tour companion"
         },
 
@@ -47,6 +54,7 @@ const initialState = {
             eMail: "dany@gmail.com",
             skype: "eagle31",
             birthDate: "1984-11-16",
+            image: img,
             description: "tour companion"
         },
 
@@ -57,6 +65,7 @@ const initialState = {
             eMail: "dany@gmail.com",
             skype: "eagle31",
             birthDate: "1984-11-16",
+            image: img,
             description: "tour companion"
         }
     ]

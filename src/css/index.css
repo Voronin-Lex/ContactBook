@@ -10,11 +10,11 @@ body {
   margin: 0 auto;
 }
 .btn-group {
-  margin-left: 13%;
+  margin-left: 22vw;
 }
 #AddContact {
   margin-left: 45%;
-  margin-top: 6px;
+  margin-top: 4vh;
 }
 form > .btn {
   margin-left: 15%;
@@ -24,10 +24,11 @@ h3 {
   text-align: center;
 }
 .app {
-  height: 50vh;
+  height: 70vh;
   width: 100vw;
   display: flex;
   border: solid 2px #001C00;
+  margin-top: 5vh;
 }
 .list {
   background: #003300;

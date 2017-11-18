@@ -7,12 +7,21 @@ import FormGroup from 'react-bootstrap/lib/FormGroup'
 import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import Button from 'react-bootstrap/lib/Button'
+import img from '../../resources/no-photo.jpg'
 
 class PersonForm extends Component {
 
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    isExist(newName){
+        for(let i=0; i< this.props.persons.length; i++){
+            if(newName.toLowerCase() === this.props.persons[i].name.toLowerCase())
+                return true;
+        }
+        return false;
     }
 
     handleSubmit(event) {
@@ -24,9 +33,14 @@ class PersonForm extends Component {
             eMail: event.target.email.value,
             skype: event.target.skype.value,
             birthDate: event.target.birthDate.value,
+            image : img,
             description: event.target.description.value
         };
+        console.log(newPerson);
+        if(!this.isExist(newPerson.name))
         this.props.createContact(newPerson);
+        else
+            alert("This contact already exist");
         setTimeout(() => window.location.assign("#/"), 1000);
     }
 
@@ -98,6 +112,14 @@ class PersonForm extends Component {
                             placeholder="Enter description"
                         />
                     </FormGroup>
+                    <FormGroup
+                        bsSize="sm"
+                        controlId="photo">
+                        <ControlLabel>photo</ControlLabel>
+                        <FormControl
+                            type="file"
+                        />
+                    </FormGroup>
                     <Button type="submit" bsStyle="success">
                         Add Contact
                     </Button>
@@ -111,7 +133,9 @@ class PersonForm extends Component {
 }
 
 function mapStateToProps(state) {
-    return {};
+    return {
+        persons: state.persons.contacts
+    };
 }
 
 function matchDispatchToProps(dispatch) {
