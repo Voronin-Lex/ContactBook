@@ -28,15 +28,12 @@ class BirthDayList extends Component {
     }
 
     getBirthdayPeople() {
-
-        let birthdayPeople = this.normalizeBirthdays().filter((person) => {
+        return this.normalizeBirthdays().filter((person) => {
 
             let dayDiff = person.birthDate - this.getToday();
-            if (dayDiff >= -5000 && dayDiff <= this.twoDays)
-                return person;
-        });
+            return (dayDiff >= -5000 && dayDiff <= this.twoDays)
 
-        return birthdayPeople;
+        });
     }
 
     renderList() {

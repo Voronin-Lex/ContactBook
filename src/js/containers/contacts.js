@@ -23,8 +23,7 @@ class ContactList extends Component {
 
         let filteredPersons = this.props.persons.filter(person => {
             let name = person.name.split(" ")[0];
-            if (name.startsWith(this.props.currentLetter))
-                return person;
+            return (name.startsWith(this.props.currentLetter))
         });
         return filteredPersons;
     }
@@ -37,8 +36,8 @@ class ContactList extends Component {
             let matchEMail = person.eMail.toLowerCase().includes(this.props.searchPattern);
             let matchSkype = person.skype.toLowerCase().includes(this.props.searchPattern);
             let mathDescription = person.description.toLowerCase().includes(this.props.searchPattern);
-            if (matchName || matchPhone || matchMobile || matchEMail || matchSkype || mathDescription)
-                return person
+            return (matchName || matchPhone || matchMobile || matchEMail || matchSkype || mathDescription)
+
         });
         return matchedContacts;
     }
@@ -69,6 +68,7 @@ class ContactList extends Component {
         return (
             <div className="app">
                 <div className="list">
+                    <h2>Contacts</h2>
                     <div className="contacts-container">
                         {renderedContacts}
                     </div>

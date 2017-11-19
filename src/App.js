@@ -3,9 +3,7 @@ import CreatePersonForm from './js/containers/create-person';
 import EditPersonForm from './js/containers/edit-person'
 import MainPage from './js/containers/main-page';
 import {Switch, Route, HashRouter as Router } from 'react-router-dom'
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import {NotFound} from './js/components/not-found'
-
 
 
 class App extends Component {

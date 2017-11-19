@@ -9,7 +9,7 @@ const initialState = {
             mobile: "114-15-22",
             eMail: "nick@gmail.com",
             skype: "zanozza19",
-            birthDate: "1990-01-10",
+            birthDate: "1990-11-19",
             image: img,
             description: "old fellow Nicki"
         },
@@ -31,7 +31,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "dany@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-09-13",
+            birthDate: "1984-11-22",
             image: img,
             description: "tour companion"
         },
@@ -42,7 +42,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "july@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-11-17",
+            birthDate: "1984-11-21",
             image: img,
             description: "tour companion"
         },
@@ -53,7 +53,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "dany@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-11-16",
+            birthDate: "1984-11-20",
             image: img,
             description: "tour companion"
         },
@@ -64,7 +64,7 @@ const initialState = {
             mobile: "452-23-22",
             eMail: "dany@gmail.com",
             skype: "eagle31",
-            birthDate: "1984-11-16",
+            birthDate: "1984-11-19",
             image: img,
             description: "tour companion"
         }

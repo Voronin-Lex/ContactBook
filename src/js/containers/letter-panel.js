@@ -6,10 +6,6 @@ import Button from 'react-bootstrap/lib/Button'
 import ButtonGroup from 'react-bootstrap/lib/ButtonGroup'
 
 class LetterPanel extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     generateButtons() {
 
         let buttonCodes = Array.from({length: 26}, (v, i) => {

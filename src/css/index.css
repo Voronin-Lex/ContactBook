@@ -33,8 +33,10 @@ h3 {
 .list {
   background: #003300;
   display: flex;
+  flex-flow: column;
   color: #EDF1BE;
   height: 100%;
+  width: 12%;
   overflow: auto;
 }
 .list h2 {

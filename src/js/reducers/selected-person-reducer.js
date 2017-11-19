@@ -11,17 +11,16 @@ export default function (state, action) {
         birthDate: "1990-01-10",
         image: img,
         description: "old fellow Nicki"
-    }
+    };
 
     if (typeof state === 'undefined')
         return defaultContact;
 
     switch (action.type) {
         case 'SELECT_PERSON':
-                 return (typeof action.payload !== 'undefined')
-                     ? action.payload
-                     : null;
-            break;
+            return (typeof action.payload !== 'undefined')
+                ? action.payload
+                : null;
+        default: return state;
     }
-    return state;
 }

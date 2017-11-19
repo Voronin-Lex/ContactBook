@@ -10,7 +10,6 @@ export default function (state, action) {
         case 'ADD_PERSON':
             let newState = {...state, contacts: [...state.contacts, action.payload]};
             return newState;
-            break;
         case 'EDIT_PERSON':
             let editedState = {};
             editedState.contacts = state.contacts.map(item => {
@@ -24,13 +23,11 @@ export default function (state, action) {
                 }
             });
             return editedState;
-            break;
         case 'DELETE_PERSON':
             let contacts = state.contacts.filter(item => item.name!== action.payload.name);
             return {
                 ...state, contacts: [...contacts]
             };
-            break;
         default: return state;
 
     }

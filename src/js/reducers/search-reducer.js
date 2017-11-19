@@ -6,7 +6,6 @@ export default function (state, action) {
     switch (action.type) {
         case 'SEARCH_PERSON':
             return action.payload;
-            break;
         default : return state;
     }
 }
